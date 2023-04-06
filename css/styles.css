@@ -458,6 +458,64 @@ body {
   background-color: #31d0aa;
 }
 
+/**================= MODAL WINDOW ====================*/
+.backdrop {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: rgba(46, 47, 66, 0.4);
+}
+
+.backdrop.is-hidden {
+  /* pointer-events: none;
+  opacity: 0; */
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 408px;
+  min-height: 576px;
+  background: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal-button-close {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0px;
+  top: 0px;
+  transform: translate(-100%, 100%);
+  min-width: 24px;
+  min-height: 24px;
+  padding: 0px;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.modal-button-icon {
+  fill: var(--headings-text-color);
+}
+
+.modal-button-close:hover,
+.modal-button-close:focus {
+  background-color: var(--active-states);
+}
+
+.modal-button-close:hover > .modal-button-icon,
+.modal-button-close:focus > .modal-button-icon {
+  fill: #ffffff;
+}
 /*?================= PAGE PORTFOLIO ==================*/
 
 /**================= OUR WORK ========================*/
